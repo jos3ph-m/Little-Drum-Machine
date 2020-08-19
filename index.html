@@ -16,6 +16,7 @@
     <div class="container">
       <h1 class="title">Little Drum Machine</h1>
       <div class="drum-machine">
+        <!-- Kick Channel -->
         <div class="channel channel-1">
           <div class="controls">
             <h3>Kick</h3>
@@ -49,6 +50,7 @@
             <div class="pad kick-pad step15"></div>
           </div>
         </div>
+        <!-- Snare Channel -->
         <div class="channel channel-2">
           <div class="controls">
             <h3>Snare</h3>
@@ -80,47 +82,198 @@
             <div class="pad snare-pad step15"></div>
           </div>
         </div>
+        <!-- Clap Channel -->
         <div class="channel channel-3">
           <div class="controls">
             <h3>Clap</h3>
-            <i class="fas fa-volume-mute"></i>
+            <button data-track="2" class="mute clap-volume">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="clap-select" id="clap-select">
+              <option value="./allSamples/clap_full.wav">Full Clap</option>
+              <option value="./allSamples/clap_sharp.wav">Sharp Clap</option>
+              <option value="./allSamples/clap_snappy.wav">Snappy Clap</option>
+            </select>
           </div>
-          <div class="pads"></div>
+          <div class="clap pads">
+            <div class="pad clap-pad step0"></div>
+            <div class="pad clap-pad step1"></div>
+            <div class="pad clap-pad step2"></div>
+            <div class="pad clap-pad step3"></div>
+            <div class="pad clap-pad step4"></div>
+            <div class="pad clap-pad step5"></div>
+            <div class="pad clap-pad step6"></div>
+            <div class="pad clap-pad step7"></div>
+            <div class="pad clap-pad step8"></div>
+            <div class="pad clap-pad step9"></div>
+            <div class="pad clap-pad step10"></div>
+            <div class="pad clap-pad step11"></div>
+            <div class="pad clap-pad step12"></div>
+            <div class="pad clap-pad step13"></div>
+            <div class="pad clap-pad step14"></div>
+            <div class="pad clap-pad step15"></div>
+          </div>
         </div>
+        <!-- Tom Channel -->
         <div class="channel channel-4">
           <div class="controls">
             <h3>Tom</h3>
-            <i class="fas fa-volume-mute"></i>
+            <button data-track="3" class="mute tom-volume">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="tom-select" id="tom-select">
+              <option value="./allSamples/tom_punchy.wav">Punchy Tom</option>
+              <option value="./allSamples/tom_thick.wav">Thick Tom</option>
+              <option value="./allSamples/tom_hollow.wav">Hollow Tom</option>
+            </select>
           </div>
-          <div class="pads"></div>
+          <div class="tom pads">
+            <div class="pad tom-pad step0"></div>
+            <div class="pad tom-pad step1"></div>
+            <div class="pad tom-pad step2"></div>
+            <div class="pad tom-pad step3"></div>
+            <div class="pad tom-pad step4"></div>
+            <div class="pad tom-pad step5"></div>
+            <div class="pad tom-pad step6"></div>
+            <div class="pad tom-pad step7"></div>
+            <div class="pad tom-pad step8"></div>
+            <div class="pad tom-pad step9"></div>
+            <div class="pad tom-pad step10"></div>
+            <div class="pad tom-pad step11"></div>
+            <div class="pad tom-pad step12"></div>
+            <div class="pad tom-pad step13"></div>
+            <div class="pad tom-pad step14"></div>
+            <div class="pad tom-pad step15"></div>
+          </div>
         </div>
+        <!-- Closed Hat Channel -->
         <div class="channel channel-5">
           <div class="controls">
-            <h3>Closed Hat</h3>
-            <i class="fas fa-volume-mute"></i>
+            <h3>Closed HiHat</h3>
+            <button data-track="3" class="mute chh-volume">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="chh-select" id="chh-select">
+              <option value="./allSamples/closed_hh_saturated.wav"
+                >Saturated CHH</option
+              >
+              <option value="./allSamples/closed_hh_quick.wav"
+                >Quick CHH</option
+              >
+              <option value="./allSamples/closed_hh_warm.wav">Warm CHH</option>
+            </select>
           </div>
-          <div class="pads"></div>
+          <div class="chh pads">
+            <div class="pad chh-pad step0"></div>
+            <div class="pad chh-pad step1"></div>
+            <div class="pad chh-pad step2"></div>
+            <div class="pad chh-pad step3"></div>
+            <div class="pad chh-pad step4"></div>
+            <div class="pad chh-pad step5"></div>
+            <div class="pad chh-pad step6"></div>
+            <div class="pad chh-pad step7"></div>
+            <div class="pad chh-pad step8"></div>
+            <div class="pad chh-pad step9"></div>
+            <div class="pad chh-pad step10"></div>
+            <div class="pad chh-pad step11"></div>
+            <div class="pad chh-pad step12"></div>
+            <div class="pad chh-pad step13"></div>
+            <div class="pad chh-pad step14"></div>
+            <div class="pad chh-pad step15"></div>
+          </div>
         </div>
         <div class="channel channel-6">
           <div class="controls">
             <h3>Open Hat</h3>
-            <i class="fas fa-volume-mute"></i>
+            <button data-track="4" class="mute ohh-volume">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="ohh-select" id="ohh-select">
+              <option value="./allSamples/open_hh_techy.wav">Techy OHH</option>
+              <option value="./allSamples/open_hh_blush.wav">Blush OHH</option>
+              <option value="./allSamples/open_hh_808.wav">808 OHH</option>
+            </select>
           </div>
-          <div class="pads"></div>
+          <div class="ohh pads">
+            <div class="pad ohh-pad step0"></div>
+            <div class="pad ohh-pad step1"></div>
+            <div class="pad ohh-pad step2"></div>
+            <div class="pad ohh-pad step3"></div>
+            <div class="pad ohh-pad step4"></div>
+            <div class="pad ohh-pad step5"></div>
+            <div class="pad ohh-pad step6"></div>
+            <div class="pad ohh-pad step7"></div>
+            <div class="pad ohh-pad step8"></div>
+            <div class="pad ohh-pad step9"></div>
+            <div class="pad ohh-pad step10"></div>
+            <div class="pad ohh-pad step11"></div>
+            <div class="pad ohh-pad step12"></div>
+            <div class="pad ohh-pad step13"></div>
+            <div class="pad ohh-pad step14"></div>
+            <div class="pad ohh-pad step15"></div>
+          </div>
         </div>
         <div class="channel channel-7">
           <div class="controls">
             <h3>Bass</h3>
-            <i class="fas fa-volume-mute"></i>
+            <button data-track="6" class="mute bass-volume">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="bass-select" id="bass-select">
+              <option value="./allSamples/bass_synthy.wav">Synthy Bass</option>
+              <option value="./allSamples/bass_fat.wav">Fat Bass</option>
+              <option value="./allSamples/bass_robo.wav">Robo Bass</option>
+            </select>
           </div>
-          <div class="pads"></div>
+          <div class="bass pads">
+            <div class="pad bass-pad step0"></div>
+            <div class="pad bass-pad step1"></div>
+            <div class="pad bass-pad step2"></div>
+            <div class="pad bass-pad step3"></div>
+            <div class="pad bass-pad step4"></div>
+            <div class="pad bass-pad step5"></div>
+            <div class="pad bass-pad step6"></div>
+            <div class="pad bass-pad step7"></div>
+            <div class="pad bass-pad step8"></div>
+            <div class="pad bass-pad step9"></div>
+            <div class="pad bass-pad step10"></div>
+            <div class="pad bass-pad step11"></div>
+            <div class="pad bass-pad step12"></div>
+            <div class="pad bass-pad step13"></div>
+            <div class="pad bass-pad step14"></div>
+            <div class="pad bass-pad step15"></div>
+          </div>
         </div>
         <div class="channel channel-8">
           <div class="controls">
             <h3>Synth</h3>
-            <i class="fas fa-volume-mute"></i>
+            <button data-track="7" class="mute synth-volume">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="synth-select" id="synth-select">
+              <option value="./allSamples/synth_verby.wav">Verby Synth</option>
+              <option value="./allSamples/synth_spook.wav">Spook Synth</option>
+              <option value="./allSamples/synth_ah.wav">Ah Synth</option>
+            </select>
           </div>
-          <div class="pads"></div>
+          <div class="synth pads">
+            <div class="pad synth-pad step0"></div>
+            <div class="pad synth-pad step1"></div>
+            <div class="pad synth-pad step2"></div>
+            <div class="pad synth-pad step3"></div>
+            <div class="pad synth-pad step4"></div>
+            <div class="pad synth-pad step5"></div>
+            <div class="pad synth-pad step6"></div>
+            <div class="pad synth-pad step7"></div>
+            <div class="pad synth-pad step8"></div>
+            <div class="pad synth-pad step9"></div>
+            <div class="pad synth-pad step10"></div>
+            <div class="pad synth-pad step11"></div>
+            <div class="pad synth-pad step12"></div>
+            <div class="pad synth-pad step13"></div>
+            <div class="pad synth-pad step14"></div>
+            <div class="pad synth-pad step15"></div>
+          </div>
         </div>
       </div>
     </div>
