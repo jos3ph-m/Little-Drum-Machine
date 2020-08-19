@@ -14,14 +14,40 @@
   </head>
   <body>
     <div class="container">
-      <h1>The Little Drum Machine</h1>
+      <h1 class="title">Little Drum Machine</h1>
       <div class="drum-machine">
         <div class="channel channel-1">
           <div class="controls">
             <h3>Kick</h3>
-            <i class="fas fa-volume-mute"></i>
+            <button data-track="0" class="mute kick-volume">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="kick-select" id="kick-select">
+              <option value="./allSamples/kick-punchy.wav">Punchy Kick</option>
+              <option value="./allSamples/kick-thick.wav">Thick Kick</option>
+              <option value="./allSamples/kick-classic.wav"
+                >Classic Kick</option
+              >
+            </select>
           </div>
-          <div class="pads"></div>
+          <div class="kick pads">
+            <div class="pad kick-pad step0"></div>
+            <div class="pad kick-pad step1"></div>
+            <div class="pad kick-pad step2"></div>
+            <div class="pad kick-pad step3"></div>
+            <div class="pad kick-pad step4"></div>
+            <div class="pad kick-pad step5"></div>
+            <div class="pad kick-pad step6"></div>
+            <div class="pad kick-pad step7"></div>
+            <div class="pad kick-pad step8"></div>
+            <div class="pad kick-pad step9"></div>
+            <div class="pad kick-pad step10"></div>
+            <div class="pad kick-pad step11"></div>
+            <div class="pad kick-pad step12"></div>
+            <div class="pad kick-pad step13"></div>
+            <div class="pad kick-pad step14"></div>
+            <div class="pad kick-pad step15"></div>
+          </div>
         </div>
         <div class="channel channel-2">
           <div class="controls">
