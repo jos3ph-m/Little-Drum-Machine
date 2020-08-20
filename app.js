@@ -1,4 +1,4 @@
-class DrumMachine {
+class LittleDrumMachine {
   constructor() {
     this.kickAudio = document.querySelector(".kick-sample");
     this.snareAudio = document.querySelector(".snare-sample");
@@ -8,10 +8,12 @@ class DrumMachine {
     this.ohhAudio = document.querySelector(".ohh-sample");
     this.bassAudio = document.querySelector(".bass-sample");
     this.synthAudio = document.querySelector(".synth-sample");
+    this.bpm = 120;
+    this.isPlaying = null;
   }
 }
 
 // Init
-const drumMachine = new DrumMachine();
+const littleDrumMachine = new LittleDrumMachine();
 
 // Event Listeners
