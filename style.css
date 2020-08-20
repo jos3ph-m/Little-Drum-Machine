@@ -214,3 +214,12 @@ footer {
   background-color: rgb(85, 85, 85);
   color: white;
 }
+
+@keyframes playHead {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
