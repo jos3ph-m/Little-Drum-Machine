@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alata&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Roboto&family=Roboto+Mono:ital@1&display=swap");
 
 * {
   margin: 0;
@@ -9,38 +9,49 @@
 h1 {
   font-family: "Alata", sans-serif;
   text-align: center;
-  margin: 30px;
+  color: white;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+.information {
+  color: white;
+  font-family: "Alata", sans-serif;
+  margin: 0 auto;
 }
 
 h3 {
   color: white;
   text-align: center;
   font-family: "Alata", sans-serif;
+  margin-bottom: 5px;
 }
 
-.media {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  width: 300px;
+h3:hover {
+  cursor: default;
 }
 
 .drum-machine {
-  margin: 0 auto;
+  margin: 20px auto;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   width: 1200px;
-  height: 1000px;
+  height: 1050px;
+  padding: 0px 20px 50px;
   background-color: rgb(32, 32, 31);
-  border-radius: 7px;
+  border-radius: 15px;
+
+  -webkit-box-shadow: 3px 6px 63px 15px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 3px 6px 63px 15px rgba(0, 0, 0, 0.16);
+  box-shadow: 3px 6px 63px 15px rgba(0, 0, 0, 0.16);
 }
 
 .channel {
   display: flex;
   flex-direction: row;
+  margin-top: 5px;
 }
 
 .controls {
@@ -51,15 +62,12 @@ h3 {
   margin-left: 40px;
 }
 
-.bus {
-}
-
 .pads {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 950px;
-  margin: 10px 20px 0;
+  margin: 30px 20px 0;
 }
 
 .pad {
@@ -67,9 +75,120 @@ h3 {
   height: 45px;
   width: 45px;
   border-radius: 5px;
+  border: 1px solid black;
+}
+
+.pad:hover,
+.play:hover {
+  cursor: pointer;
+}
+
+.pad:nth-child(4n-7) {
+  background-color: rgb(116, 113, 107);
 }
 
 select,
 button {
+  height: 25px;
+}
+
+.mute {
+  margin-bottom: 2px;
+  background-color: rgb(155, 153, 146);
+  padding: 2px;
+  outline: none;
+  border: none;
+}
+
+.mute:hover {
+  cursor: pointer;
+}
+
+.mute:active,
+.mute:focus {
+  outline: none;
+}
+
+select {
+  background-color: rgb(176, 236, 156);
+  padding: 2px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px;
+}
+
+select:active,
+select:focus {
+  outline: none;
+}
+
+select:focus > option:checked {
+  background-color: rgb(176, 236, 156);
+  color: rgb(88, 187, 21);
+}
+
+.media {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 400px;
+  margin-top: 40px;
+}
+
+.play-button {
+  background-color: rgb(32, 32, 31);
+  color: white;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  height: 45px;
+  width: 45px;
+  border-radius: 5px;
+  font-size: 40px;
+  padding-top: 5px;
+  margin-right: 30px;
+}
+
+.play-button:hover {
+  cursor: pointer;
+}
+
+.tempo {
+  padding-top: 10px;
+}
+
+.tempo-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  position: relative;
+  background-color: rgb(116, 113, 107);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
   height: 20px;
+  width: 20px;
+  border-radius: 25px;
+  background: white;
+  cursor: pointer;
+}
+
+.tempo-slider:active,
+.tempo-slider:focus,
+.mute:active,
+.mute:focus {
+  outline: none;
+}
+
+footer {
+  padding: 10px;
+  height: 40px;
+  margin-top: 100px;
+  background-color: #274277;
+  color: white;
+  text-align: center;
+  font-family: "Alata", sans-serif;
 }

@@ -14,12 +14,9 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="title">Little Drum Machine</h1>
       <div class="drum-machine">
-        <div class="media">
-          <div class="play">Play</div>
-          <div class="tempo">Tempo</div>
-        </div>
+        <h1 class="title">Little Drum Machine</h1>
+        <p class="information">(Press space to play)</p>
 
         <!-- Kick Channel -->
         <div class="channel channel-1">
@@ -281,7 +278,25 @@
             <div class="pad synth-pad step15"></div>
           </div>
         </div>
+        <div class="media">
+          <button class="play-button">
+            <i class="fas fa-play"></i>
+          </button>
+          <div class="tempo">
+            <input
+              type="range"
+              class="tempo-slider"
+              max="500"
+              min="20"
+              value="120"
+            />
+            <p>Tempo: <span class="tempo-nr">120</span></p>
+          </div>
+        </div>
       </div>
+      <footer>
+        <p>Made with 💗 by Joseph Medina</p>
+      </footer>
     </div>
     <script src="./app.js"></script>
   </body>
