@@ -130,9 +130,11 @@ select:focus > option:checked {
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
   width: 400px;
+  padding-left: 30px;
+  padding-right: 10px;
   margin-top: 40px;
 }
 
