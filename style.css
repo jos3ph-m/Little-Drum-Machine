@@ -158,6 +158,11 @@ select:focus > option:checked {
   padding-top: 10px;
 }
 
+.tempo p,
+.tempo-nr {
+  font-family: "Alata", sans-serif;
+}
+
 .tempo-slider {
   -webkit-appearance: none;
   width: 100%;
