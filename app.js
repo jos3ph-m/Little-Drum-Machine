@@ -11,7 +11,7 @@ class LittleDrumMachine {
     this.bassAudio = document.querySelector(".bass-sample");
     this.synthAudio = document.querySelector(".synth-sample");
     this.index = 0;
-    this.bpm = 128;
+    this.bpm = 120;
     this.isPlaying = null;
     this.selects = document.querySelectorAll("select");
     this.muteButtons = document.querySelectorAll(".mute");
@@ -64,7 +64,7 @@ class LittleDrumMachine {
     this.index++;
   }
   start() {
-    const interval = (30 / this.bpm) * 1000;
+    const interval = (15 / this.bpm) * 1000;
     if (this.isPlaying) {
       clearInterval(this.isPlaying);
       this.playButton.innerHTML = `<i class="fas fa-play"></i>`;
