@@ -20,9 +20,10 @@ h1 {
 }
 
 .information {
-  color: white;
+  color: rgb(189, 189, 189);
   font-family: "Alata", sans-serif;
-  margin: 0 auto;
+  font-size: 0.9rem;
+  margin: 5px auto;
 }
 
 h3 {
@@ -43,7 +44,7 @@ h3:hover {
   justify-content: space-around;
   flex-direction: column;
   width: 1200px;
-  height: 1050px;
+  height: 100 0px;
   padding: 0px 20px 50px;
   background-color: rgb(32, 32, 31);
   border-radius: 15px;
@@ -57,6 +58,7 @@ h3:hover {
   display: flex;
   flex-direction: row;
   margin-top: 5px;
+  padding-top: 5px;
 }
 
 .controls {
@@ -174,7 +176,7 @@ select:focus > option:checked {
   -webkit-appearance: none;
   width: 100%;
   position: relative;
-  background-color: rgb(116, 113, 107);
+  background-color: rgb(56, 55, 53);
   cursor: pointer;
   border-radius: 1rem;
 }
@@ -198,7 +200,7 @@ input[type="range"]::-webkit-slider-thumb {
 footer {
   padding: 10px;
   height: 40px;
-  margin-top: 100px;
+  margin-top: 20px;
   background-color: #274277;
   color: white;
   text-align: center;

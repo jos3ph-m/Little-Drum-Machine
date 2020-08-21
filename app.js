@@ -94,3 +94,11 @@ littleDrumMachine.pads.forEach((pad) => {
 littleDrumMachine.playButton.addEventListener("click", function () {
   littleDrumMachine.start();
 });
+
+// Start on space press
+document.body.onkeyup = function (e) {
+  e.preventDefault();
+  if (e.keyCode == 32) {
+    littleDrumMachine.start();
+  }
+};
