@@ -79,7 +79,36 @@ class LittleDrumMachine {
       }, interval);
     }
   }
-  changeSample() {}
+  changeSample(e) {
+    const selectName = e.target.name;
+    const selectValue = e.target.value;
+    switch (selectName) {
+      case "kick-select":
+        this.kickAudio.src = selectValue;
+        break;
+      case "snare-select":
+        this.snareAudio.src = selectValue;
+        break;
+      case "clap-select":
+        this.clapAudio.src = selectValue;
+        break;
+      case "tom-select":
+        this.tomAudio.src = selectValue;
+        break;
+      case "chh-select":
+        this.chhAudio.src = selectValue;
+        break;
+      case "ohh-select":
+        this.ohhAudio.src = selectValue;
+        break;
+      case "bass-select":
+        this.bassAudio.src = selectValue;
+        break;
+      case "synth-select":
+        this.synthAudio.src = selectValue;
+        break;
+    }
+  }
   mute() {}
   changeTempo() {}
   updateTempo() {}
@@ -103,3 +132,9 @@ document.body.onkeyup = function (e) {
     littleDrumMachine.start();
   }
 };
+
+littleDrumMachine.selects.forEach((select) => {
+  select.addEventListener("change", function (e) {
+    littleDrumMachine.changeSample(e);
+  });
+});
