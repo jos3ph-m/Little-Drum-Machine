@@ -109,7 +109,65 @@ class LittleDrumMachine {
         break;
     }
   }
-  mute() {}
+  mute(e) {
+    const muteIndex = e.target.getAttribute("data-track");
+    e.target.classList.toggle("activated");
+    if (e.target.classList.contains("activated")) {
+      switch (muteIndex) {
+        case "0":
+          this.kickAudio.volume = 0;
+          break;
+        case "1":
+          this.snareAudio.volume = 0;
+          break;
+        case "2":
+          this.clapAudio.volume = 0;
+          break;
+        case "3":
+          this.tomAudio.volume = 0;
+          break;
+        case "4":
+          this.chhAudio.volume = 0;
+          break;
+        case "5":
+          this.ohhAudio.volume = 0;
+          break;
+        case "6":
+          this.bassAudio.volume = 0;
+          break;
+        case "7":
+          this.synthAudio.volume = 0;
+          break;
+      }
+    } else {
+      switch (muteIndex) {
+        case "0":
+          this.kickAudio.volume = 1;
+          break;
+        case "1":
+          this.snareAudio.volume = 1;
+          break;
+        case "2":
+          this.clapAudio.volume = 1;
+          break;
+        case "3":
+          this.tomAudio.volume = 1;
+          break;
+        case "4":
+          this.chhAudio.volume = 1;
+          break;
+        case "5":
+          this.ohhAudio.volume = 1;
+          break;
+        case "6":
+          this.bassAudio.volume = 1;
+          break;
+        case "7":
+          this.synthAudio.volume = 1;
+          break;
+      }
+    }
+  }
   changeTempo() {}
   updateTempo() {}
 }
@@ -136,5 +194,11 @@ document.body.onkeyup = function (e) {
 littleDrumMachine.selects.forEach((select) => {
   select.addEventListener("change", function (e) {
     littleDrumMachine.changeSample(e);
+  });
+});
+
+littleDrumMachine.muteButtons.forEach((button) => {
+  button.addEventListener("click", function (e) {
+    littleDrumMachine.mute(e);
   });
 });
