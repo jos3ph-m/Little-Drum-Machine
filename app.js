@@ -168,8 +168,19 @@ class LittleDrumMachine {
       }
     }
   }
-  changeTempo() {}
-  updateTempo() {}
+  changeTempo(e) {
+    const tempoText = document.querySelector(".tempo-nr");
+
+    tempoText.innerText = e.target.value;
+  }
+  updateTempo(e) {
+    this.bpm = e.target.value;
+    clearInterval(this.isPlaying);
+    const playButton = document.querySelector(".play");
+    if (playButton.classList.contains("activated")) {
+      this.start();
+    }
+  }
 }
 
 const littleDrumMachine = new LittleDrumMachine();
@@ -177,6 +188,9 @@ const littleDrumMachine = new LittleDrumMachine();
 // Event Listeners
 littleDrumMachine.pads.forEach((pad) => {
   pad.addEventListener("click", littleDrumMachine.activatedPad);
+  pad.addEventListener("animationend", function () {
+    this.style.animation = "";
+  });
 });
 
 littleDrumMachine.playButton.addEventListener("click", function () {
@@ -201,4 +215,12 @@ littleDrumMachine.muteButtons.forEach((button) => {
   button.addEventListener("click", function (e) {
     littleDrumMachine.mute(e);
   });
+});
+
+littleDrumMachine.tempoSlider.addEventListener("input", function (e) {
+  littleDrumMachine.changeTempo(e);
+});
+
+littleDrumMachine.tempoSlider.addEventListener("change", function (e) {
+  littleDrumMachine.updateTempo(e);
 });
